@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gallary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-QC-YiT">
+                                <rect key="frame" x="231" y="147" width="138" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="IsM-jS-M8Z"/>
+                                    <constraint firstAttribute="width" constant="138" id="eTf-6H-9QQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IsM-jS-M8Z"/>
+                                        <exclude reference="eTf-6H-9QQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="IsM-jS-M8Z"/>
+                                        <include reference="eTf-6H-9QQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1C-ob-Y0h">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dym-H2-QyR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G1C-ob-Y0h" firstAttribute="top" secondItem="Ghc-QC-YiT" secondAttribute="bottom" constant="71" id="BCL-6Y-Iz6"/>
+                            <constraint firstItem="Ghc-QC-YiT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="123" id="Guk-Gw-32A"/>
+                            <constraint firstItem="Ghc-QC-YiT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ayD-kE-WFy"/>
+                            <constraint firstItem="G1C-ob-Y0h" firstAttribute="centerX" secondItem="Ghc-QC-YiT" secondAttribute="centerX" id="qI6-S6-mQQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="G1C-ob-Y0h"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Guk-Gw-32A"/>
+                                <exclude reference="ayD-kE-WFy"/>
+                                <exclude reference="BCL-6Y-Iz6"/>
+                                <exclude reference="qI6-S6-mQQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="G1C-ob-Y0h"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Guk-Gw-32A"/>
+                                <include reference="ayD-kE-WFy"/>
+                                <include reference="BCL-6Y-Iz6"/>
+                                <include reference="qI6-S6-mQQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ghc-QC-YiT" id="z8Q-h1-cFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="338"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="240" height="240"/>
+    </resources>
+</document>
